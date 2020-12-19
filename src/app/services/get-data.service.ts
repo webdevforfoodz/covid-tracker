@@ -9,11 +9,20 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class GetDataService {
 
   private url: string = 'https://api.covidtracking.com/v1/us/current.json';
+  private urlHistorical: string = 'https://api.covidtracking.com/v1/us/daily.json';
+
 
   constructor(private http: HttpClient) { }
 
   getCurrentUsCovidData(): Observable<any>{
     return this.http.get<any>(this.url)
+      .pipe(
+        catchError(this.handleError<any>('getCurrentUsCovidData',[]))
+      )
+  }
+
+  getHistoricalData() {
+    return this.http.get(this.urlHistorical)
       .pipe(
         catchError(this.handleError<any>('getCurrentUsCovidData',[]))
       )

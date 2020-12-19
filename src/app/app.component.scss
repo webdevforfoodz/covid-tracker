@@ -1,6 +1,7 @@
 .body {
     min-height: 100vh;
     background: rgb(217, 244, 255);
+    filter: invert(0);
 
     ul {
         list-style-type: none;

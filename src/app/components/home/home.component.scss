@@ -52,3 +52,13 @@
     bottom: 10px;
     right: 15px;
 }
+
+.chart {
+    padding: 50px 0px;
+    width: 70%;
+    margin: auto;
+    canvas {
+        background-color: white;
+        padding: 10px;
+    }
+}

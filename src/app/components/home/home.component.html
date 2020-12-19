@@ -1,6 +1,6 @@
 <span class="title">U.S Current Covid Values</span>
 
-<div class="container">
+<div class="container" *ngIf="data?.date">
     <ul>
         <span class="title">Current Numbers:</span>
         <li>Hospitalized: <span>{{data.hospitalizedCurrently}}</span></li>
@@ -21,4 +21,16 @@
     <div class="date">
         <span>Updated: {{date}}</span>
     </div>
+</div>
+
+<div class="chart" *ngIf="loading">
+    <canvas baseChart 
+        [datasets]="lineChartData" 
+        [labels]="lineChartLabels" 
+        [options]="lineChartOptions"
+        [colors]="lineChartColors" 
+        [legend]="lineChartLegend" 
+        [chartType]="lineChartType" 
+        [plugins]="lineChartPlugins">
+    </canvas>
 </div>

@@ -6,17 +6,20 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { StatesdataComponent } from './components/statesdata/statesdata.component'
+import { ChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    StatesdataComponent
+    StatesdataComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
