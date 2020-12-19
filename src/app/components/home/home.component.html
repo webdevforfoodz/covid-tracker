@@ -1,0 +1,24 @@
+<span class="title">U.S Current Covid Values</span>
+
+<div class="container">
+    <ul>
+        <span class="title">Current Numbers:</span>
+        <li>Hospitalized: <span>{{data.hospitalizedCurrently}}</span></li>
+        <li>In ICU: <span>{{data.inIcuCurrently}}</span></li>
+        <li>On Ventilator: <span>{{data.onVentilatorCurrently}}</span></li>
+        <li>Positive Increase: <span>{{data.positiveIncrease}}</span></li>
+        <li>Death increase: <span>{{data.deathIncrease}}</span></li>
+    </ul>
+    <ul>
+        <span class="title">Total Numbers:</span>
+        <li>Total Hospitalized: <span>{{data.hospitalizedCumulative}}</span></li>
+        <li>Total Deaths: <span>{{data.death}}</span></li>
+        <li>Total On Ventilator: <span>{{data.inIcuCumulative}}</span></li>
+        <li>Total Positive Cases: <span>{{data.positive}}</span></li>
+        <li>Total Recovered: <span>{{data.recovered}}</span></li>
+    </ul>
+
+    <div class="date">
+        <span>Updated: {{date}}</span>
+    </div>
+</div>
