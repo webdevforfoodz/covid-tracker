@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { StatesdataComponent } from './components/statesdata/statesdata.component'
 import { ChartsModule } from 'ng2-charts';
+import { RadiobuttonsComponent } from './components/radiobuttons/radiobuttons.component';
+import { HomechartComponent } from './components/homechart/homechart.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,12 +17,16 @@ import { ChartsModule } from 'ng2-charts';
     AppComponent,
     HomeComponent,
     StatesdataComponent,
+    RadiobuttonsComponent,
+    HomechartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

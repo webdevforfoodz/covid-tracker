@@ -23,14 +23,7 @@
     </div>
 </div>
 
-<div class="chart" *ngIf="loading">
-    <canvas baseChart 
-        [datasets]="lineChartData" 
-        [labels]="lineChartLabels" 
-        [options]="lineChartOptions"
-        [colors]="lineChartColors" 
-        [legend]="lineChartLegend" 
-        [chartType]="lineChartType" 
-        [plugins]="lineChartPlugins">
-    </canvas>
+<div class="chart">
+    <app-homechart *ngIf="fetchStatus" [historicalData]="historicalData"></app-homechart>
 </div>
+

@@ -1,0 +1,16 @@
+<form #f="ngForm">
+    <div class="box">
+        <input type="radio" value="confirmed" name="option" [(ngModel)]="myOption" #con (click)="test(con)"> Confirmed
+    </div>
+    <div class="box">
+        <input type="radio" value="recovered" name="option" [(ngModel)]="myOption" #rev (click)="test(rev)"> Recovered
+    </div>
+    <div class="box">
+        <input type="radio" value="deaths" name="option" [(ngModel)]="myOption" #death (click)="test(death)"> Deaths
+    </div>
+    <div class="box">
+        <input type="radio" value="hospitalized" name="option" [(ngModel)]="myOption" #hos (click)="test(hos)"> Hospitalized
+    </div>
+    
+</form>
+

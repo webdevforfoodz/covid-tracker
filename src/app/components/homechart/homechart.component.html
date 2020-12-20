@@ -1,0 +1,14 @@
+<div class="chart" *ngIf="loading">
+    <div class="radio-btn-box">
+        <app-radiobuttons (newOption)="changeOption($event)"></app-radiobuttons>
+    </div>
+    <canvas baseChart 
+        [datasets]="lineChartData" 
+        [labels]="lineChartLabels" 
+        [options]="lineChartOptions"
+        [colors]="lineChartColors" 
+        [legend]="lineChartLegend" 
+        [chartType]="lineChartType" 
+        [plugins]="lineChartPlugins">
+    </canvas>
+</div>
