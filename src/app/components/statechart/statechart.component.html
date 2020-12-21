@@ -1,0 +1,12 @@
+<div class="state-chart">
+    <div >
+        <span>{{stats}}</span>
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType">
+      </canvas>
+    </div>
+</div>

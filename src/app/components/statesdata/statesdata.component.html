@@ -1,1 +1,33 @@
-<p>statesdata works!</p>
+<span class="title" *ngIf="selectedStateData[0]?.date">{{stateName}} Current Covid Values</span>
+
+<div class="input-wrapper">
+    <label for="a">Select State: </label>
+    <select name="state" id="a" #input (change)="updateValues(input.value)">
+        <option value={{option}} *ngFor="let option of options">{{option}}</option>
+    </select>
+</div>
+<div class="container" *ngIf="selectedStateData[0]?.date">
+    
+    <ul>
+        <span class="title">Current Numbers:</span>
+        <li>Hospitalized: <span>{{selectedStateData[0].hospitalizedCurrently}}</span></li>
+        <li>In ICU: <span>{{selectedStateData[0].inIcuCurrently}}</span></li>
+        <li>On Ventilator: <span>{{selectedStateData[0].onVentilatorCurrently}}</span></li>
+        <li>Positive Increase: <span>{{selectedStateData[0].positiveIncrease}}</span></li>
+        <li>Death increase: <span>{{selectedStateData[0].deathIncrease}}</span></li>
+    </ul>
+    <ul>
+        <span class="title">Total Numbers:</span>
+        <li>Total Hospitalized: <span>{{selectedStateData[0].hospitalizedCurrently}}</span></li>
+        <li>Total Deaths: <span>{{selectedStateData[0].death}}</span></li>
+        <li>Total On Ventilator: <span>{{selectedStateData[0].inIcuCumulative}}</span></li>
+        <li>Total Positive Cases: <span>{{selectedStateData[0].positive}}</span></li>
+        <li>Total Recovered: <span>{{selectedStateData[0].recovered}}</span></li>
+    </ul>
+
+    <div class="date">
+        <span>Updated: {{selectedStateData[0].date}}</span>
+    </div>
+</div>
+
+<app-statechart [data]="statesData" *ngIf="statesData.length"></app-statechart>

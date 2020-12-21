@@ -10,6 +10,7 @@ import { ChartsModule } from 'ng2-charts';
 import { RadiobuttonsComponent } from './components/radiobuttons/radiobuttons.component';
 import { HomechartComponent } from './components/homechart/homechart.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StatechartComponent } from './components/statechart/statechart.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     StatesdataComponent,
     RadiobuttonsComponent,
-    HomechartComponent
+    HomechartComponent,
+    StatechartComponent
   ],
   imports: [
     BrowserModule,
