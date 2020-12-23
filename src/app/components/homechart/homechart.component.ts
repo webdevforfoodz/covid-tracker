@@ -23,6 +23,7 @@ export class HomechartComponent implements OnInit {
 
   lineChartOptions = {
     responsive: true,
+    maintainAspectRatio: false,
     elements: {
       point: {
         radius: 0
