@@ -2,4 +2,26 @@
     padding: 100px 0;
     width: 70%;
     margin: auto;
+    text-align: center;
+
+    canvas {
+        background-color: white;
+        padding: 10px;
+    }
+}
+
+.barchart-title {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.barchart-radio-btn {
+    text-align: center;
+    background-color: rgb(223, 223, 223);
+    padding: 20px 0;
+    border-radius: 15px 15px 0 0;
+}
+
+.barchart {
+    min-height: 800px;
 }

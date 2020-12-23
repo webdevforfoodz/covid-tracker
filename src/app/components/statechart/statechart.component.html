@@ -1,6 +1,9 @@
 <div class="state-chart">
-    <div >
-        <span>{{stats}}</span>
+    <span class="barchart-title">{{stats}}</span>
+    <div class="barchart-radio-btn">
+      <app-radiobuttons (newOption)="changeOption($event)"></app-radiobuttons>
+    </div>
+    <div class="barchart">
       <canvas baseChart
               [datasets]="barChartData"
               [labels]="barChartLabels"
