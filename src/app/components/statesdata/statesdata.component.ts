@@ -52,6 +52,11 @@ export class StatesdataComponent implements OnInit {
     Object.keys(statesName.states[0]).map((state:any) => {
       if (this.states[state] === value) {
         this.selectedStateData = this.statesData.filter((x:any) => x.state === state);
+        Object.keys(this.selectedStateData[0]).map((x:any) => {
+          if (this.selectedStateData[0][x] == null ) {
+            this.selectedStateData[0][x] = 'N/A'
+          }
+        })
         this.getStateName(state)
       }
     })
